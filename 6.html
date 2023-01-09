@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="elementy" id="przycisk">pierwszy element</button>
+    <div class="elementy" id="element_div">drugi element</div>
+    <span class="elementy" id="element_span">trzeci element</span>
+    <hr>
+    <div id="opis"></div>
+    <script>
+        const opis=document.querySelector('#opis')
+        const elementy=document.querySelector('.elememty')
+        for(const element of elementy)
+        {
+            element.addEventListener("click", function()
+            {
+                opis.innerHTML=this.id;
+            })
+        }
+    </script>
+</body>
+</html>
